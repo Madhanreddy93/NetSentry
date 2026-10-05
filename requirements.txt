@@ -1,0 +1,9 @@
+numpy==2.3.3
+pandas==2.3.3
+scikit-learn==1.7.2
+scapy==2.6.1
+streamlit==1.50.0
+streamlit-autorefresh==1.0.1
+plotly==6.3.1
+joblib==1.5.2
+pytest==8.4.2
