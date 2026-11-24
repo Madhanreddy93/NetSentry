@@ -48,11 +48,20 @@ streamlit run app.py
 ## Scope and ethics
 NetSentry is a defensive monitoring prototype. It does not perform deep inspection of encrypted TLS traffic, replace hardware packet-inspection appliances, or run attacks on any external target. Generated iptables rules are suggestions and should be reviewed before use.
 
-## Future improvements
-- Live packet capture on a real interface
-- Supervised models to compare against the anomaly detector
-- Automatic rule expiry and whitelisting
-- Alert notifications by email or chat
+## Future Implementation: DDoS Attack Mitigation
+
+NetSentry currently detects attacks and generates firewall rules. The next step is to automate the response so an attack is stopped before the server goes down.
+
+1. **Automatic rule enforcement:** apply the generated iptables rules automatically when an attack is detected, with an admin approval option for high-impact blocks.
+
+2. **Rate limiting:** limit the number of connections and packets per second from each source, so a flood is slowed before it is fully blocked.
+
+3. **SYN flood protection:** turn on SYN cookies and limit half-open connections to stop SYN floods from filling the server's connection table.
+
+4. **Tiered response:** respond according to the anomaly score.
+   - Low risk: log and monitor
+   - Medium risk: rate-limit the source
+   - High risk: block temporarily
 
 ## Author
 RANGAREDDY GARI MADHAN 
