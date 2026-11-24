@@ -4,6 +4,14 @@
 
 **Live demo:** https://netsentry-4r3vhmdhtckjun2sbxbh2w.streamlit.app/
 
+## Screenshots
+
+
+![Dashboard](Dashboard.jpg)
+![Alerts timeline](Alerts timeline.jpg)
+![Before attack](Before attack.jpg)
+![Under attack](Under attack.jpg)
+
 ## Problem
 Cloud servers and campus networks face constant port scans, SSH brute force attempts and volumetric DDoS floods. Traditional firewalls rely on static IP blacklists, which fail against rotating residential proxies and new botnets. NetSentry detects attacks from traffic behavior instead of fixed IP lists.
 
